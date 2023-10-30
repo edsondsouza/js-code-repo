@@ -21,11 +21,25 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 let someNumber = 33 // 33
 
 let stringNumber = String(someNumber);
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
 
 // 1 => true
 // "" => false
 // "Edson" => true
 
 // 33 => conversion from number to string, the output will look like number but when you "typeof" the output will be displayed as string.
+
+// ************ Operations ************
+
+let x = 3;
+const y = x++; 
+
+console.log(x);
+console.log(y);
+
+let a = 3;
+const b = ++a;
+
+console.log(a);
+console.log(b);
