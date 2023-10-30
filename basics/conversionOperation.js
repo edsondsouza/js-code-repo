@@ -1,4 +1,4 @@
-let score = true // 33, "33", "33abd", null, undefined, true, false
+let score = true // 33, "33", "33abc", null, undefined, true, false
 
 let valueInNumber = Number(score)
 // console.log(typeof valueInNumber);
@@ -21,14 +21,14 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 let someNumber = 33 // 33
 
 let stringNumber = String(someNumber);
-// console.log(stringNumber);
-// console.log(typeof stringNumber);
+// console.log(stringNumber); // 33
+// console.log(typeof stringNumber); // string
 
 // 1 => true
 // "" => false
 // "Edson" => true
 
-// 33 => conversion from number to string, the output will look like number but when you "typeof" the output will be displayed as string.
+// 33 => conversion from number to string, the output will look like number but when you "typeof", the output will be displayed as string.
 
 // ************ Operations ************
 
