@@ -36,15 +36,39 @@ const myFunction = function(){
 
 // JavaScript is a dynamically typed language
 
-console.log(typeof score) // number
-console.log(typeof scoreValue) // number
-console.log(typeof id) // symbol
-console.log(typeof isLoggedIn) // boolean
-console.log(typeof outsideTemp) // object
-console.log(typeof userEmail) // undefined
-console.log(typeof bigNumber) // bigint
-console.log(typeof heros) // object
-console.log(typeof myObj) // object
-console.log(typeof myFunction) // function => also called as "funtion object"
+// console.log(typeof score) // number
+// console.log(typeof scoreValue) // number
+// console.log(typeof id) // symbol
+// console.log(typeof isLoggedIn) // boolean
+// console.log(typeof outsideTemp) // object
+// console.log(typeof userEmail) // undefined
+// console.log(typeof bigNumber) // bigint
+// console.log(typeof heros) // object
+// console.log(typeof myObj) // object
+// console.log(typeof myFunction) // function => also called as "funtion object"
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitives), Heap (Non-Primitives)
+
+let myHero = "spiderman"
+
+let yourHero = myHero;
+// console.log(yourHero)
+yourHero = "superman"
+console.log(yourHero)
+console.log(myHero)
+
+let user = {
+    name: "hitesh",
+    email: "hitesh@goolge.com"
+}
+
+let anotherUser = user
+anotherUser.name = "Edson"
+console.log(anotherUser)
+console.log(user)
+
+// check the image in https://excalidraw.com/
