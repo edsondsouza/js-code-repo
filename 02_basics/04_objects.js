@@ -55,12 +55,32 @@ users[1].email
 // to check if the property exits
 // console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 
-const learner = {
-    learningstudent: "Edson",
-    age: 21,
-    location: "Bengaluru"
+const course = {
+    courseName: "js in hindi",
+    price: "free",
+    courseInstructor: "Hitesh"
 }
 
-const {learningstudent: name} = learner
-// console.log(learningstudent) // error
-console.log(name)
+// console.log(course.courseInstructor)
+// console.log(course["courseInstructor"])
+
+const {courseInstructor} = course
+// console.log(courseInstructor)
+
+const {courseInstructor: instructor} = course
+// console.log(instructor)
+
+// {
+//     "name": "js in hindi",
+//     "courseprice": "free",
+//     "instructor": "hitesh"
+// }
+
+[
+    {},
+    {},
+    {}
+]
+
+// https://randomuser.me/
+// JSON formatter => https://jsonformatter.org/
