@@ -72,6 +72,27 @@ Another_JsUser.greeting = function() {
 Another_JsUser.greetingTwo = function() {
     console.log(`Hello JS user, ${this.name}`);
 }
-console.log(Another_JsUser.greeting) // [Function (anonymous)]
-console.log(Another_JsUser.greeting())
-console.log(Another_JsUser.greetingTwo())
+// console.log(Another_JsUser.greeting) // [Function (anonymous)]
+// console.log(Another_JsUser.greeting())
+// console.log(Another_JsUser.greetingTwo())
+
+// Let's say we have an object user with a name property and two methods: greet (a regular function) and greetArrow (an arrow function).
+
+let user = {
+    name: "John",
+    greet: function() {
+        console.log(`Hello, ${this.name}`);
+    },
+    greetArrow: () => {
+        console.log(`Hello, ${this.name}`);
+    }
+}
+
+user.greet(); // Outputs: Hello, John
+user.greetArrow(); // Outputs: Hello, undefined
+/*
+In the greet method, this refers to the user object, so this.name is "John".
+
+In the greetArrow method, this doesn't refer to the user object, but to the global context (which is window in a browser). Since there's no global name property, this.name is undefined.
+
+This is why arrow functions are not recommended when you want to access object properties using this. They're great for when you want to keep the same this context as the surrounding code, though.*/
