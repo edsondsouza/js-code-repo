@@ -46,8 +46,9 @@ This is a fundamental aspect of JavaScript and is important to understand when w
 
 // chai()
 
-// arrow functions
+// +++++++++++++++++++ arrow functions +++++++++++++++++++
 
+// explicit return
 // const addTwo = (num1, num2) => {
 //     return num1 + num2;
 // }
