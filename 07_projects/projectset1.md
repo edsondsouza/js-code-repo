@@ -71,7 +71,7 @@ const form = document.querySelector('form')
 form.addEventListener("submit", (e) => {
   e.preventDefault()
 
-  const height = parseInt(document.querySelector('#heading').value)
+  const height = parseInt(document.querySelector('#height').value)
   const weight = parseInt(document.querySelector('#weight').value)
   const results = document.querySelector('#weight')
 
@@ -85,4 +85,15 @@ form.addEventListener("submit", (e) => {
     results.innerHTML = `<span>${bmi}</span>`
   }
 })
+```
+## Project 3
+```javascript
+const clock = document.getElementById('clock');
+// you can write this using querySelector too
+
+setInterval(function(){
+  const date = new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML = date.toLocaleTimeString()
+}, 1000)
 ```
