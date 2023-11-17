@@ -40,16 +40,33 @@
     // Event Propagation => Event propagation ka doh context hota hai, Event Bubbling aur Event Capturing. Market mei aur project mei jada event bubbling ka use hota hai. Lekin kabhi kabar event capturing ka bhi use hota hai. 
     // Learn how event propagation works and how to prevent event propagation
 
-    document.getElementById('images').addEventListener('click', function(e){
-        console.log("clicked inside the ul")
-    }, false)
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul")
+    // }, false)
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log("owl clicked")
-        e.stopPropagation()
-    }, false)
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked")
+    //     e.stopPropagation()
+    // }, false)
 
-    
+    // document.getElementById('google').addEventListener("click", function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     // console.log(e)
+    //     console.log(`google clicked`)
+    // }, false)
+
+    // event spill over example
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode)
+        console.log(e.target.tagName)
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+            // removeIt.parentNode.removeChild(removeIt)
+        }
+    }, false)
 
 </script>
 </html>
