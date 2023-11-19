@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card using XMLHttpRequest</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="photo">
+          <img class="user-profile" alt="Profile Photo" />
+        </div>
+        <div class="user-info">
+          <h2 class="username">Username</h2>
+          <p class="followers">
+            Followers: <span class="follower-count">0</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const githubAPI = "https://api.github.com/users/edsondsouza";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", githubAPI);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          try {
+            // console.log("hello");
+            // console.log(this.responseText)
+            const data = JSON.parse(this.responseText);
+            let Userfollowers = data.followers;
+            let Userprofile = data.avatar_url;
+            let Username = data.login;
+            document.querySelector(".follower-count").innerHTML = Userfollowers;
+            document.querySelector(".user-profile").src = Userprofile;
+            document.querySelector(".username").innerHTML = Username;
+          } catch (e) {
+            console.error("Error parsing response:", error);
+          }
+        } else {
+          console.log("Request failed ", xhr.satus);
+        }
+      }
+    };
+  </script>
+</html>
