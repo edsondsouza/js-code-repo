@@ -115,3 +115,6 @@ fetch("https://api.github.com/users/edsondsouza")
 .catch(function(error){
     console.log(error)
 })
+
+// fetch documentation
+// https://developer.mozilla.org/en-US/docs/Web/API/fetch#examples
