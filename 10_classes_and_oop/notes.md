@@ -1,7 +1,7 @@
 # Javascript and Classes
 
 ## Does javascript have classes?
-Technically NO. Back then it was not there and even today Javascript does not have classes. Because Javascript is a prototype-based-language. Classes in javascript is syntactic-sugar. Classes were introduced so that developers are felt missed out. JS is not oopl, not functional programming language rather it is a **Prototype-based-language**.
+Technically NO. Back then it was not there and even today Javascript does not have classes. Because Javascript is a prototype-based-language. Classes in javascript is syntactic-sugar. Classes were introduced so that developers are not felt missed out. JS is not oopl, not functional programming language rather it is a **Prototype-based-language**.
 
 Yes, JavaScript introduced the concept of classes in ECMAScript 2015 (ES6). Classes in JavaScript provide a more structured and familiar way to create objects and deal with inheritance. However, behind the scenes, JavaScript's classes are primarily syntactical sugar over the existing prototype-based inheritance model.
 
